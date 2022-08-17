@@ -3,13 +3,9 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import classNames from 'classnames';
 
-import { filtersFetching, filtersFetched, filtersFetchingError, activeFilterChanged } from '../../actions';
+import { filtersFetching, filtersFetched, filtersFetchingError, activeFilterChanged } from './filterSlice';
 import Spinner from '../spinner/Spinner';
 
-// Задача для этого компонента:
-// Фильтры должны формироваться на основании загруженных данных
-// Фильтры должны отображать только нужных героев при выборе
-// Активный фильтр имеет класс active
 
 const HeroesFilters = () => {
 
