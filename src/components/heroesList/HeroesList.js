@@ -49,6 +49,7 @@ const HeroesList = () => {
         }
 
         return arr.map(({id, ...props}) => {
+            
             return (
                 <CSSTransition 
                     key={id}
@@ -59,7 +60,7 @@ const HeroesList = () => {
             )
         })
     }
-
+    console.log(filteredHeroes)
     const elements = renderHeroesList(filteredHeroes);
     return (
         <TransitionGroup component="ul">
