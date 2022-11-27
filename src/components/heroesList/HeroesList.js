@@ -23,7 +23,7 @@ const HeroesList = () => {
 
     const onDelete = useCallback(
         (id) => {
-            request(`http://localhost:3001/heroes/${id}`, "DELETE")
+            request(`https://6308173c46372013f5762546.mockapi.io/heroes/${id}`, "DELETE")
                 .then((data) => console.log(data, "Deleted"))
                 .then(dispatch(heroDeleted(id)))
                 .catch((err) => console.log(err));

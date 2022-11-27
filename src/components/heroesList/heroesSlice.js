@@ -14,7 +14,7 @@ const initialState = heroesAdapter.getInitialState({
 
 export const fetchHeroes = createAsyncThunk("heroes/fetchHeroes", () => {
     const { request } = useHttp();
-    return request("http://localhost:3001/heroes");
+    return request("https://6308173c46372013f5762546.mockapi.io/heroes");
 });
 
 const heroesSlice = createSlice({

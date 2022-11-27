@@ -27,7 +27,11 @@ const HeroesAddForm = () => {
             element: heroElement,
         };
 
-        request("http://localhost:3001/heroes", "POST", JSON.stringify(newHero))
+        request(
+            "https://6308173c46372013f5762546.mockapi.io/heroes",
+            "POST",
+            JSON.stringify(newHero)
+        )
             .then((res) => console.log(res, "Sending successful"))
             .then(dispatch(heroCreated(newHero)))
             .catch((err) => console.log(err));
